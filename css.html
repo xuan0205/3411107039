@@ -11,6 +11,10 @@
         color:red;
         font-size: 20px;
     }
+    /* class選擇器(使用.符號)*/
+.two{
+    font-size: 20px;
+}
     /*  ID選擇器(使用#符號) */
 #one{
     color: green;
@@ -19,6 +23,29 @@
     *{
         font-family: "標楷體";
     }
+    /*屬性選擇器(使用屬性=值)*/
+    input[type=text]{
+        width: 50px;
+    }
+     /*後代選擇器(使用空白符號)*/
+     .child a{
+        color:green;
+     }
+     /*子選擇器(使用>符號) */
+     .child>a{
+        color:green;
+     }
+      /*偽類選擇器(使用:符號) */
+      .child4:hover{
+        color:red;
+     }
+      /*偽元素選擇器(使用::符號) */
+      .child5::before{
+        content: "大家好，";
+      }
+      .child5::after{
+        content: "，請多多指教";
+      }
 </style>
 <body>
     <h4>型態選擇器(標籤)</h4>
@@ -30,5 +57,21 @@
     <hr>
     <h4>ID選擇器(使用#符號)</h4>
     <a href="#" id="one">ID選擇器</a>
+    <hr>
+<h4>屬性選擇器(使用屬性=值)</h4>
+姓名<input type="text">
+電話<input type="text">
+地址<input type="text">
+<hr>
+<h4>後代選擇器(使用空白符號)</h4>
+<div class="child">
+    <a href="#">div>a</a>
+</div>
+<hr>
+<h4>子選擇器(使用>符號)</h4>
+<div class="childi">
+    <p>
+        <a href="#">div>p>a</a>
+    </p>
 </body>
 </html>
